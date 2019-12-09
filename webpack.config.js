@@ -7,11 +7,13 @@ module.exports = {
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, "dist"),
+        publicPath: path.resolve(__dirname, "dist"),
     },
-    plugins: [new HtmlWebpackPlugin({
-        filename: "index.html",
-        template: "./index.html"
-    }), new Dotenv()],
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: "index.html",
+            template: "./index.html"
+        }), new Dotenv()],
     module: {
         rules: [
             {
